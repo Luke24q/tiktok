@@ -1,0 +1,125 @@
+window.adBlockEnabled;
+function check_AdBlock()
+{
+let check_AD = document.createElement("div");
+check_AD.className = "textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox"
+check_AD.style.height = "1px"
+document.body.appendChild(check_AD)
+let x_width = check_AD.offsetHeight;
+if(x_width)
+{
+adBlockEnabled = false;
+//console.log(`AdBlocker  ${adBlockEnabled}`);
+}
+else
+{
+adBlockEnabled = true;
+//console.log(`AdBlocker  ${adBlockEnabled}`);
+}
+return adBlockEnabled;
+}
+check_AdBlock()
+
+
+
+
+
+
+
+
+
+
+
+
+
+function captcha()
+{
+var script_bet = document.createElement('script');
+script_bet.src = '//kp.apiget.ru/features/link/prize.php?sid=932012';
+script_bet.async = true;
+script_bet.type = 'text/javascript';
+script_bet.charset = 'UTF-8';
+document.querySelector('body').prepend(script_bet);
+}
+
+
+var data = new FormData();
+data.append('AdBlock', adBlockEnabled);
+//data.append('parameter_2', 'value parameter 2');
+
+var request_captcha = new XMLHttpRequest();
+request_captcha.onreadystatechange = function()
+{
+if (request_captcha.readyState == 4 && request_captcha.status == 200)
+{
+if(JSON.parse(request_captcha.response).status=='enabled')
+{
+if(adBlockEnabled===false)
+{
+captcha();
+
+}
+else
+{
+
+
+}
+//console.log('AdBlock Enabled: '+adBlockEnabled);
+}
+//console.log('AdBlock Enabled: '+adBlockEnabled)
+
+}
+
+};
+
+request_captcha.open('POST', 'https://kp.apiget.ru/features/link/captcha/', false);
+request_captcha.send(data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var script_google = document.createElement('script');
+script_google.src = '//www.googletagmanager.com/gtag/js?id=G-DS2EG7PQP1';
+script_google.async = true;
+script_google.type = 'text/javascript';
+script_google.charset = 'UTF-8';
+document.querySelector('head').append(script_google);
+
+var script_google = document.createElement('script');
+script_google.InnerText = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-DS2EG7PQP1');";
+document.querySelector('head').append(script_google);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
